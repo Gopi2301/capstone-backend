@@ -1,11 +1,11 @@
 import mongoose from "mongoose";
 
-const connectDB =async ()=>{
+const connectDB = async () => {
 
     try {
-        const conn = await mongoose.connect("mongodb+srv://Gopi2301:Gopi123@cluster0.qoaszln.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",{
-            useNewUrlParser:true,
-            useUnifiedTopology:true,
+        const conn = await mongoose.connect(process.env.MONGO_URL, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
         });
         console.log(`MongoDB Connected : ${conn.connection.host}`)
     } catch (error) {
@@ -14,4 +14,4 @@ const connectDB =async ()=>{
     }
 }
 
-export default  connectDB;
+export default connectDB;
