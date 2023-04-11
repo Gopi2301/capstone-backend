@@ -1,14 +1,14 @@
 import express from "express";
-import { chats } from "./data.js";
+import { chats } from "./backend/data.js";
 const app = express();
 import cors from "cors";
 import * as dotenv from 'dotenv'
-import connectDB from "./config/db.js";
-import userRouters from "./routes/userRoutes.js";
-import { errorHandler } from "./middleware/errormiddleware.js";
-import { notFound } from "./middleware/errormiddleware.js";
-import chatRoutes from "./routes/chatRoutes.js"
-import messageRoutes from "./routes/messageRoutes.js"
+import connectDB from "./backend/config/db.js";
+import userRouters from "./backend/routes/userRoutes.js";
+import { errorHandler } from "./backend/middleware/errormiddleware.js";
+import { notFound } from "./backend/middleware/errormiddleware.js";
+import chatRoutes from "./backend/routes/chatRoutes.js"
+import messageRoutes from "./backend/routes/messageRoutes.js"
 // import http from 'http'
 // const server = http.createServer(app)
 import { Server } from "socket.io"
