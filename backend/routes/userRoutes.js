@@ -1,7 +1,7 @@
 import express from "express";
 const router = express.Router()
 import registeredUser, { allUsers, authUser } from "../controllers/userControllers.js";
-import { protect } from "../middleware/authMiddleware.js";
+import { protect } from "../middleware/authmiddleware.js";
 
 router.route("/").post(registeredUser);
 router.post("/login", authUser)
